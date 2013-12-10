@@ -2,7 +2,7 @@
   "name": "load-styles",
   "repo": "component/load-styles",
   "description": "Add a CSS <style> tag to the document's <head> node",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "keywords": [
     "css",
     "load",

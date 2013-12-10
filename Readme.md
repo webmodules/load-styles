@@ -11,7 +11,7 @@
 
 ## API
 
-  ### loadStyles(String cssStr[, Document doc]) → <style>
+### loadStyles(String cssStr[, Document doc]) → `<style>`
 
   Creates a `<style>` DOM node with the specified `cssStr` text injected into it.
   Then, the `<style>` node is inserted into the `<head>` element of the `doc`

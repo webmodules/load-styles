@@ -1,7 +1,7 @@
 
 # load-styles
 
-  Add a CSS &lt;style&gt; tag to the document's &lt;head&gt; node
+  Add a CSS `<style>` tag to the document's `<head>` node.
 
 ## Installation
 
@@ -11,7 +11,36 @@
 
 ## API
 
+  ### loadStyles(String cssStr[, Document doc]) → <style>
 
+  Creates a `<style>` DOM node with the specified `cssStr` text injected into it.
+  Then, the `<style>` node is inserted into the `<head>` element of the `doc`
+  document instance. Finally, the DOM node is returned back to the user in case
+  any further action is required on the node.
+
+## Example
+
+``` html
+<!DOCTYPE html>
+<html>
+  <script type="text/javascript" src="build/build.js"></script>
+  <body>
+    <div id="foo">This div should be red.</div>
+    <script type="text/javascript">
+      var loadStyles = require('load-styles');
+      loadStyles(
+        '#foo {' +
+        '  width: 100px;' +
+        '  height: 100px;' +
+        '  background-color: red;' +
+        '  text-align: center;' +
+        '  font-size: 9px;' +
+        '}'
+      );
+    </script>
+  </body>
+</html>
+```
 
 ## License
 

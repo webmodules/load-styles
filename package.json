@@ -1,7 +1,7 @@
 {
   "name": "load-styles",
   "description": "Add a CSS <style> tag to the document's <head> node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [
     "css",
     "load",

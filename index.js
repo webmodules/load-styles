@@ -17,7 +17,17 @@ function loadStyles(css, doc) {
   if (!doc) doc = document;
 
   var head = doc.head || doc.getElementsByTagName('head')[0];
-  if (!head) throw new Error('could not find <head> DOM node');
+
+  // no <head> node? create one...
+  if (!head) {
+    head = doc.createElement('head');
+    var body = doc.body || doc.getElementsByTagName('body')[0];
+    if (body) {
+      body.parentNode.insertBefore(head, body);
+    } else {
+      doc.documentElement.appendChild(head);
+    }
+  }
 
   var style = doc.createElement('style');
   style.type = 'text/css';
